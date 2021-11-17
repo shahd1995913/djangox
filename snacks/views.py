@@ -7,11 +7,6 @@ from django.urls import reverse_lazy
 from .models import Snack
 
 
-class SnackListView(ListView) :
-
-    template_name = "snacks/snack_list.html"
-
-    model = Snack
 
 class SnackDetailView(DetailView) :
  
@@ -19,18 +14,19 @@ class SnackDetailView(DetailView) :
  
     model = Snack
 
+
+
+
+class SnackListView(ListView) :
+
+    template_name = "snacks/snack_list.html"
+
+    model = Snack
+
+
 class SnackUpdateView(UpdateView) :
  
     template_name = "snacks/snack_update.html"
- 
-    model = Snack
- 
-    fields = ["name", "purchaser", "description"]
-
-
-class SnackCreateView(CreateView) :
- 
-    template_name = "snacks/snack_create.html"
  
     model = Snack
  
@@ -44,3 +40,14 @@ class SnackDeleteView(DeleteView) :
     model = Snack
     
     success_url = reverse_lazy("snack_list")
+
+
+class SnackCreateView(CreateView) :
+ 
+    template_name = "snacks/snack_create.html"
+ 
+    model = Snack
+ 
+    fields = ["name", "purchaser", "description"]
+
+
