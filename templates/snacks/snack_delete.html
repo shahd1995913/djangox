@@ -1,0 +1,26 @@
+
+{% extends '_base.html' %}
+{% block content %}
+<nav>
+<a href="{% url 'snack_list' %}">Snacks list</a>
+
+<a href="{% url 'snack_create' %}">Create New Snack</a>
+
+</nav>
+
+<h1>Delete Snack</h1>
+
+<h1>Delete</h1>
+
+<form action="" method="POST">
+
+  {% csrf_token %}
+
+  <p>did you  want to delete the  "{{ snack.name }} from the list of the snacks , please insert yes if you want to delete"???</p>
+
+  <input type="submit" value="yes">
+
+
+</form>
+
+{% endblock content %}
