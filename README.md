@@ -8,7 +8,8 @@
 - [x]  Create a Django app of your choosing.
 - [x]  The specific functionality of the site is up to you but should have a model that makes use of get_user_model
 
-## The Last pull requst : 
+## The Last pull requst :  https://github.com/shahd1995913/djangox/pull/2
+
 
 
 
